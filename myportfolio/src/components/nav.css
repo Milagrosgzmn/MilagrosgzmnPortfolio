@@ -1,0 +1,25 @@
+#check-them{
+    position: absolute;
+    opacity: 0;
+}
+#check-them:checked~.moon{
+    transform:rotate(360deg) scale(0);
+}
+.moon{
+    color: rgb(20, 20, 20);
+    font-size: 2em;
+    transition:1s ease ;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+}   
+.sun{
+    font-size: 2em;
+    position: absolute;
+    transform: scale(0);
+    transition:1s ease ;
+    color: rgb(20, 20, 20);
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+
+}
+#check-them:checked~.sun{
+    transform:scale(1)rotate(360deg) ;
+}
