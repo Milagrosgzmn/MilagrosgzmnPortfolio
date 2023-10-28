@@ -5,3 +5,11 @@
     margin: 0%;
     padding: 0%;
 }
+.dark{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    transition: 1s ease;
+}
+.light{
+    transition: 1s ease;
+}

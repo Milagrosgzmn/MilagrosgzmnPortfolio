@@ -1,13 +1,35 @@
+"use client"
+
 import Link from "next/link";
 import NightsStayRoundedIcon from '@mui/icons-material/NightsStayRounded';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
+import {useState, useEffect} from 'react';
 import './nav.css';
+
 export default function NavBar() {
+
+    const [theme, setTheme] = useState("light");
+
+    function handleChangeTheme(){
+        setTheme((prevTheme)=>prevTheme === "light" ? "dark" : "light");
+    }
+
+    useEffect(() => {
+      if (theme=== "dark") {
+        document.querySelector("html")?.classList.add('dark');
+      }else{
+        document.querySelector("html")?.classList.remove('dark');
+        document.querySelector("html")?.classList.add('light');
+      }
+      
+    }, [theme])
+    
+
     return(
         <nav className="flex w-full">
             <div></div>
             <ul className="w-3/4 flex justify-around p-4
-            dark:bg-neutral-900">
+            ">
                 <li>
                     <Link href="/">Home</Link>
                 </li>
@@ -31,7 +53,7 @@ export default function NavBar() {
                 flex justify-center
                 items-center
                 " >
-                    <input type="checkbox" name="" id="check-them"/>
+                    <input onChange={handleChangeTheme} type="checkbox" name="" id="check-them"/>
                     
                 <LightModeRoundedIcon className="sun"/>
                 <span id="toggle" className="
