@@ -5,11 +5,29 @@
     margin: 0%;
     padding: 0%;
 }
-.dark{
+.dark, .dark ul, .dark nav{
     color: white;
     background-color: rgb(19, 19, 19);
-    transition: 1s ease;
+    transition: 0.5s ease;
 }
-.light{
-    transition: 1s ease;
+.dark input, .dark textarea{
+    background-color:rgb(19, 19, 19) ;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.light, .light ul, .light nav{
+    transition: 0.5s ease;
+}
+.light input, .light textarea{
+    border: 1px solid rgb(19, 19, 19) ;
+    border-radius: 20px;
+}
+.content-cont{
+ transition: opacity 0.1s ease-in;
+}
+
+@media screen and (min-width: 768px) {
+    nav{
+        border-bottom: 2px solid rgba(117, 115, 115, 0.176);
+    }    
 }
