@@ -23,3 +23,11 @@
 #check-them:checked~.sun{
     transform:scale(1)rotate(360deg) ;
 }
+li{
+    font-weight: 500;
+}
+@media (max-width: 640px) {
+    .not-hover:hover {
+      color:#667eea;
+    }
+  }
