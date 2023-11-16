@@ -67,7 +67,7 @@ export default function Slider() {
                     className="p-2 cursor-pointer"
                     >
                     <CircleRoundedIcon className='p-0.5 text-base 
-                     hover:text-sky-500 '></CircleRoundedIcon>
+                     hover:text-sky-500  h-4 w-4'></CircleRoundedIcon>
                     </div>
                 ))
                 }
