@@ -5,6 +5,17 @@
     margin: 0%;
     padding: 0%;
 }
+p{
+    font-size: 1.125rem;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+input, textarea {
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+}
 .dark, .dark ul, .dark nav{
     color: white;
     background-color: rgb(19, 19, 19);
@@ -12,15 +23,16 @@
 }
 .dark input, .dark textarea{
     background-color:rgb(19, 19, 19) ;
-    border: 1px solid white;
-    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.5s ease;
 }
 .light, .light ul, .light nav{
-    transition: 0.5s ease;
+    color: rgb(31 41 55);
+    transition: 0.3s ease;
 }
 .light input, .light textarea{
     border: 1px solid rgb(19, 19, 19) ;
-    border-radius: 20px;
+    transition: 0.5s ease;
 }
 .content-cont{
  transition: opacity 0.1s ease-in;
