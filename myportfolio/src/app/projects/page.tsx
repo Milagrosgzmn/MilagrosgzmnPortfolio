@@ -13,7 +13,7 @@ export default function Projects() {
         },
         {
         title:'Rick and Morty',
-        description:"<p>SPA (singe page aplication) desarrollada usando React para el Front End y Redux toolik como state management. Esta página te muestra de forma dinamica la información de un personaje luego de que lo añadas. Los datos se obtienes de la API <a target='_blank' href='https://rickandmortyapi.com/'>The Rick And Morty</a> y se almacenan los necesarios en una base de datos PostgreSQL a través de un Back End desarrollado en NodeJS utilizando Express.</p><p>Algunos características del proyecto:</p><ol><li>Registro de nuevos usuarios e inicio de sesión.</li><li>Barra de busquedas para añadir personajes.</li><li>Almacenamiento de personajes favoritos.</li><li>Filtros y ordenamientos.</li></ol>",
+        description:"<p>SPA (single page application) desarrollada usando React para el Front End y Redux como state management. Esta página te muestra de forma dinámica la información de un personaje luego de que lo añadas. Los datos se obtienes de la API <a target='_blank' href='https://rickandmortyapi.com/'>The Rick And Morty</a> y se almacenan en una base de datos PostgreSQL a través de un Back End desarrollado en NodeJS utilizando Express.</p><p>Algunos características del proyecto:</p><ol><li>Registro de nuevos usuarios e inicio de sesión.</li><li>Barra de busquedas para añadir personajes.</li><li>Almacenamiento de personajes favoritos.</li><li>Filtros y ordenamientos.</li></ol>",
         image:'/assets/rickAndMortyAPI.png',
         stack:'React, Node.js, Express Js, postgreSQL, Javascript.',
         deploy:'https://rick-and-morty-seven-blond.vercel.app/',
@@ -62,14 +62,14 @@ export default function Projects() {
                             </div>
                             
                         </div>
-                        <div className="flex flex-col md:flex-row justify-between py-6">
+                        <div className="flex flex-col md:flex-row justify-between py-2">
                             <div className='w-full md:w-3/5'
                             dangerouslySetInnerHTML={{ __html: project.description }} />
                             <div className="pt-4 w-full md:pt-0 md:w-2/6">
                                 <img className="rounded-xl" src={`${project.image}`} alt={`proyecto titulado ${project.title}`} />
                             </div>
                         </div>
-                        <p><span className='font-semibold'>Tecnologías: </span>{project.stack}</p>
+                        <p className='inline'>Tecnologías: </p><span className='inline font-normal'>{project.stack}</span>
 
                     </article>
                 ))
