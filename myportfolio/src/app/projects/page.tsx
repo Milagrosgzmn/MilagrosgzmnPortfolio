@@ -43,7 +43,7 @@ export default function Projects() {
                 projects.map(project =>(
                     <article className=" projectCard 
                     border-2 border-x-transparent border-t-transparent font-medium border-b-sky-800/20 md:border-none
-                    rounded-md px-8 py-8 md:shadow-xl md:shadow-gray-800/20 my-12" key={project.title}>
+                    rounded-md px-8 py-8  my-12" key={project.title}>
                         <div className="flex justify-between items-center">
                             <div id="link" className='overflow-hidden py-2 h-[4.5rem] rounded-md'>
                                 <a target="_blank" href={project.deploy ? project.deploy : ''} className="relative my-2 py-3 px-8 text-base font-bold uppercase rounded-[50px] overflow-hidden transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-sky-500 before:to-sky-200 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-[50px] hover:before:left-0">
