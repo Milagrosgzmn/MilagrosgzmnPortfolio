@@ -81,7 +81,9 @@ export default function Home() {
     </section>
     <section style={sectionStyle} id='about' className='short-vers snap-center h-screen  mx-auto flex flex-col items-center'>
         <h2 className='text-sky-500 w-full text-3xl font-bold pt-4'>Sobre mí</h2>
+        <div className='w-10/12'>
         <AboutComp />
+        </div>
       </section>
       <section style={sectionStyle} className=' short-vers snap-center h-screen  mx-auto flex flex-col  '>
         <h2 className='text-sky-500  w-full text-3xl font-bold pt-4' >Proyectos</h2>
