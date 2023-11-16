@@ -28,6 +28,7 @@ li{
 }
 @media (max-width: 640px) {
     .not-hover:hover {
-      color:#667eea;
+      color:rgb(14 165 233);
     }
   }
+

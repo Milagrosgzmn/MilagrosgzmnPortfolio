@@ -41,6 +41,7 @@ export default function NavBar() {
     useEffect(() => {
         if (theme=== "dark") {
             document.querySelector("html")?.classList.add('dark');
+            document.querySelector("html")?.classList.remove('light');
           }else{
             document.querySelector("html")?.classList.remove('dark');
             document.querySelector("html")?.classList.add('light');
@@ -52,17 +53,15 @@ export default function NavBar() {
     },[open])
 
     return(
-        <nav className="md:flex w-full fixed z-10 items-center justify-between bg-white md:px-10 px-4 ">
+        <nav className="md:flex w-full  h-[4.5rem] fixed z-10 items-center justify-between bg-white md:px-10 px-4 ">
             <div></div>
             <div  onClick={()=>{
                 setOpen(!open);
             }}>{
                 open ? <CloseRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/> : <MenuRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/>
             }
-                
-                
             </div>
-            <ul className={`bg-white md:flex md:w-auto md:pb-0 md:items-center left-0 pt-4 w-full absolute md:static
+            <ul className={`bg-white md:flex md:w-auto md:pb-0 md:items-center left-0 w-full absolute md:static
             md-pl-0 pl-9 transition-opacity ease-out duration-500
 
              ${open ? 'top-20 opacity-100' :'opacity-0 top-[-490px]'}
@@ -76,7 +75,7 @@ export default function NavBar() {
                             <span className="relative ">
                                 <span className=" relative not-hover
                                 md:after:absolute
-                                md:after:h-1 md:after:bg-indigo-500 md:after:w-[0%] md:after:ease
+                                md:after:h-1 md:after:bg-sky-500 md:after:w-[0%] md:after:ease
                                 md:after:rounded-xl 
                                 md:after:transition-all md:after:duration-300 md:after:delay-75 md:after:left-0 md:after:bottom-[-5px] md:after:content-'' md:hover:after:w-[100%] ">
                                 {link.name}
