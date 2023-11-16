@@ -1,0 +1,7 @@
+
+@media screen and (min-width: 640px) {
+   .short-vers{
+    scroll-snap-align: center;
+    height: 100vh;
+} 
+}
