@@ -1,0 +1,9 @@
+.projectCard li{
+    font-weight: 400;
+    list-style: circle;
+    margin-left: 1rem;
+    transition: 0s ease;
+}
+.projectCard{
+    font-size: 1.125rem;
+}
