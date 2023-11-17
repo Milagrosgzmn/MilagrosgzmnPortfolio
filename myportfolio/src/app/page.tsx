@@ -14,7 +14,6 @@ export default function Home() {
   const router = useRouter();
   const sectionStyle = {
       paddingTop: `${navHeight}px`,
-      height: '100vh',
   };
 
   useEffect(() => {
@@ -64,7 +63,7 @@ export default function Home() {
   };
  return (
  <div className='sm:snap-y sm:snap-mandatory max-w-5xl w-4/5 mx-auto relative h-screen overflow-y-auto overflow-x-hidden scroll-smooth'>
-    <section  style={sectionStyle} className='snap-center flex flex-col w-full items-center justify-evenly '>
+    <section  style={sectionStyle} className='snap-center h-screen flex flex-col w-full items-center justify-evenly '>
       <div className=' flex flex-col-reverse md:flex-row  items-center justify-center'>
         <article className='p-2'>
           <h1 className='text-4xl py-2 md:text-6xl font-bold'>Hola,<br/>soy Milagros Guzmán</h1>
@@ -93,7 +92,7 @@ export default function Home() {
         <ProjectComp/>
         </div>
       </section>
-      <section style={sectionStyle} className=' short-vers  mx-auto flex flex-col  '>
+      <section style={sectionStyle} className=' short-vers  mx-auto flex flex-col mb-16 '>
         <h2 className='text-sky-500  w-full text-3xl font-bold py-8'>Contacto</h2>
         <p className='p-4 font-medium  dark:text-white'>Si estás interesado/a en mi trabajo o tienes alguna pregunta, ¡no dudes en contactarme!</p>
         <div className='flex w-10/12 mx-auto items-center justify-evenly flex-col md:flex-row'>
