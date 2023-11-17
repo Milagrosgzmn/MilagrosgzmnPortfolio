@@ -37,7 +37,7 @@ export default function Projects() {
         },
     ]
     return(
-        <section className="pt-20 w-10/12 mx-auto">
+        <section className="pt-20 w-10/12 mx-auto mb-10">
             <h2 className="py-8 text-4xl font-bold text-sky-500">Proyectos</h2>
             {
                 projects.map(project =>(

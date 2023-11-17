@@ -6,6 +6,7 @@ import { useEffect } from "react";
 export default function ContactForm() {
 
     useEffect(() => {
+        console.log(process.env.NEXT_PUBLIC_KEY)
         const formulario = document.getElementById('form') as HTMLFormElement;
         const btn = document.getElementById('button');
 
@@ -19,12 +20,13 @@ export default function ContactForm() {
 
             const serviceID = 'service_forCv';
             const templateID = 'template_2qcy0qc';
-            const publicKey = process.env.NEXT_PUBLIC_KEY ;
+            const publicKey = process.env.NEXT_PUBLIC_KEY;
 
             emailjs.sendForm(serviceID, templateID, formulario, publicKey)
                 .then(() => {
                     btn.innerHTML = 'Enviar';
                     Swal.fire("¡Mensaje enviado!");
+                    formulario.reset();
                 }, (err) => {
                     btn.innerHTML = 'Enviar';
                     Swal.fire({
