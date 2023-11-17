@@ -46,7 +46,7 @@ export default function Projects() {
                     rounded-md px-8 py-8  my-12" key={project.title}>
                         <div className="flex justify-between items-center">
                             <div id="link" className='overflow-hidden py-2 h-[4.5rem] rounded-md'>
-                                <a target="_blank" href={project.deploy ? project.deploy : ''} className="relative my-2 py-3 px-8 text-base font-bold uppercase rounded-[50px] overflow-hidden transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-sky-500 before:to-sky-200 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-[50px] hover:before:left-0">
+                                <a target="_blank" href={project.deploy ? project.deploy : ''} className="relative hover:text-sky-300 my-2 py-3 px-8 text-base font-bold uppercase md:rounded-[50px] md:overflow-hidden md:transition-all md:duration-400 md:ease-in-out md:shadow-md md:hover:scale-105 md:hover:text-white md:hover:shadow-lg md:active:scale-90 md:before:absolute md:before:top-0 md:before:-left-full md:before:w-full md:before:h-full md:before:bg-gradient-to-r md:before:from-sky-500 md:before:to-sky-200 md:before:transition-all md:before:duration-500 md:before:ease-in-out md:before:z-[-1] md:before:rounded-[50px] md:hover:before:left-0">
                                 <h3
                                 className="text-2xl font-semibold 
                                 inline mr-2"

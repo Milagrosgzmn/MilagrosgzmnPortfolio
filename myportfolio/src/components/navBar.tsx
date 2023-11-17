@@ -6,6 +6,7 @@ import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import {useState, useEffect} from 'react';
+import { usePathname } from "next/navigation";
 import './nav.css';
 
 export default function NavBar() {
@@ -17,6 +18,9 @@ export default function NavBar() {
     ]
     const [theme, setTheme] = useState("light");
     const [open, setOpen] = useState(false);
+
+   
+    const pathname= usePathname();
 
     function handleChangeTheme(){
         setTheme((prevTheme)=>prevTheme === "light" ? "dark" : "light");
@@ -38,6 +42,21 @@ export default function NavBar() {
        
     }
 
+    useEffect(()=>{
+        if (pathname) {
+            const liElement = document.getElementById(`${pathname}`);
+            liElement?.classList.add('active');
+
+            const liArray = document.getElementsByClassName('lisElement');
+            for (let i = 0; i < liArray.length; i++) {
+                const element = liArray[i];
+                if (element.getAttribute('id') !== pathname) {
+                    element.classList.remove('active');
+                }
+            }
+        }
+    },[pathname])
+
     useEffect(() => {
         if (theme=== "dark") {
             document.querySelector("html")?.classList.add('dark');
@@ -58,7 +77,8 @@ export default function NavBar() {
             <div  onClick={()=>{
                 setOpen(!open);
             }}>{
-                open ? <CloseRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/> : <MenuRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/>
+                open ? <div><CloseRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/></div>
+                 : <div><MenuRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/></div>
             }
             </div>
             <ul className={`bg-white md:flex md:w-auto md:pb-0 md:items-center left-0 w-full absolute md:static
@@ -67,13 +87,13 @@ export default function NavBar() {
              ${open ? 'top-20 opacity-100' :'opacity-0 top-[-490px]'}
               md:opacity-100`}>
                 {links.map(link=>(
-                    <li className=' z-2 md:ml-8 text-xl md:my-0 my-7' key={link.name}>
+                    <li id={link.link} className='lisElement z-2 md:ml-8 text-xl md:my-0 my-7' key={link.name}>
                         <Link onClick={()=>{
                         setOpen(false);
                         
                     }} href={link.link} >
                             <span className="relative ">
-                                <span className=" relative not-hover
+                                <span className="subrayar relative not-hover
                                 md:after:absolute
                                 md:after:h-1 md:after:bg-sky-500 md:after:w-[0%] md:after:ease
                                 md:after:rounded-xl 
