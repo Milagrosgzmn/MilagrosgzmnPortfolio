@@ -8,7 +8,7 @@
 p{
     font-size: 1.125rem;
 }
-::-webkit-scrollbar{
+#summary::-webkit-scrollbar{
     display: none;
 }
 input, textarea {
@@ -43,3 +43,9 @@ input, textarea {
         border-bottom: 2px solid rgba(117, 115, 115, 0.176);
     }    
 }
+@media screen and (min-width: 640px) {
+    .short-vers{
+     scroll-snap-align: center;
+     height: 100vh;
+ } 
+ }
