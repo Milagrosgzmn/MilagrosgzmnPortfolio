@@ -3,7 +3,7 @@ import ContactForm from "@/components/form/form";
 
 export default function Contact() {
     return(
-        <section className="pt-20 w-11/12 lg:w-10/12 mx-auto">
+        <section className="pt-20 w-11/12 lg:w-10/12 mx-auto mb-10">
             <h2 className="py-8 text-4xl font-bold text-sky-500">Contacto</h2>
             <div className="flex justify-between flex-col md:flex-row">
                 <article>
