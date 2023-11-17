@@ -77,8 +77,8 @@ export default function NavBar() {
             <div  onClick={()=>{
                 setOpen(!open);
             }}>{
-                open ? <div className="static"><CloseRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/></div>
-                 : <div className="static"><MenuRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/></div>
+                open ? <div className="static md:hidden"><CloseRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/></div>
+                 : <div className="static  md:hidden"><MenuRoundedIcon className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"/></div>
             }
             </div>
             <ul className={`bg-white md:flex md:w-auto md:pb-0 md:items-center left-0 w-full absolute md:static
