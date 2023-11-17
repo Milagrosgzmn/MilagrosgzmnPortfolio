@@ -32,3 +32,14 @@ li{
     }
   }
 
+.active .subrayar::after{
+    position: absolute;
+  height: 0.25rem;
+  background-color: rgba(101, 101, 102, 0.524); /* Cambia esto al color que desees */
+  width: 100%;
+  border-radius: 0.375rem; /* Esto es equivalente a la clase 'rounded-xl' en Tailwind */
+  transition: all 0.3s ease;
+  left: 0;
+  bottom: -5px;
+  content: '';
+}
