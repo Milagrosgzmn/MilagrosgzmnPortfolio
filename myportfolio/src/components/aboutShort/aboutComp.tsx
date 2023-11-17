@@ -1,7 +1,7 @@
 import Icons from "../icons/icons";
 export default function AboutComp() {
     return(
-        <article className="mb-8 flex flex-col sm:flex-row
+        <article className="mb-4 flex flex-col sm:flex-row
         dark:text-white">
             <div className="w-full sm:w-1/2 py-4">
             <p className="text-2xl py-2 font-medium">¡Hola de nuevo! 😄</p>
@@ -12,7 +12,7 @@ export default function AboutComp() {
             </div>
             <div className="flex flex-col m-auto">
                 <h3 className="font-medium ">Tecnologías con las que he trabajado: </h3>
-            <Icons/>
+                <Icons/>
             </div>
         </article>
     );
