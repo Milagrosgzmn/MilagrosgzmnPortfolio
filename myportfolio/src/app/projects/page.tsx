@@ -8,7 +8,7 @@ export default function Projects() {
         description:'<p>Desarrollo de un E-commerce de servicios que realicé en conjunto a un equipo de desarrolladores. La aplicación consta de las características innatas de un e-commerce (CRUD de productos, autenticación, catálogo, checkout, etc…).</p><p>Además de otras como: </p><ol><li>Integración de pasarela de pagos con Mercado Pago.</li><li>Administración de usuarios y gestión de claves.</li><li>Chat y notificaciones integradas.</li><li>Envío de emails con NodeMailer.</li></ol>',
         image:'/assets/auxiebg.png',
         stack:'React, Node.js, Express Js, Mongodb, Firebase, Javascript, Sass y Tailwind.',
-        deploy:'',
+        deploy:'https://auxie-app.vercel.app/',
         repo:'https://github.com/DiazAdriel0/AUXIE-App',
         },
         {
