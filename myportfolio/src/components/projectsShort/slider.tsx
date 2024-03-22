@@ -16,7 +16,7 @@ export default function Slider() {
         {url: '/assets/surveyChallenge.png'},
     ]
     const repository =[
-        {link:'https://github.com/DiazAdriel0/AUXIE-App'},
+        {link:'https://github.com/Milagrosgzmn/AUXIE-App'},
         {link:'https://github.com/Milagrosgzmn/cr-pi-countries'},
         {link:'https://github.com/Milagrosgzmn/rick_and_morty'},
         {link:'https://github.com/Milagrosgzmn/survey_challenge'}
